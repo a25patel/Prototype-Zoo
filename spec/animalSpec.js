@@ -5,16 +5,13 @@ describe('Animal', function(){
 
   beforeEach(function(){
     // create a new animal object each time
-    animal1 = new Animal ("Miko", 27, "Pig");
+    animal = new Animal ("Miko", 27, "Pig");
     animal2 = new Animal ('Zazu', 4 ,'Toucan');
-    animal3 = new Animal ('Iago', 15, 'Tiger');
-    animal4 = new Animal ('Olaf', 26 , 'Giraffe');
-    animal5 = new Animal ('GusGus', 32, 'Elephant');
   });
 
   describe('#oink', function(){
     it('should oink if it is a pig', function(){
-      expect(animal1.oink()).toEqual('oink!')
+      expect(animal.oink()).toEqual('oink!')
     });
     it('should not oink if it is not pig', function(){
       expect(animal2.oink()).toEqual('This is not a pig')
@@ -22,20 +19,21 @@ describe('Animal', function(){
   });
 
   describe('#growUp', function(){
-    xit('should increment the age by one', function(){
-
+    it('should increment the age by one', function(){
+      animal.growUp()
+      expect(animal.age).toEqual(28)
     });
   });
 
   describe('#awake', function(){
-    xit('should initially be off', function(){
-
+    it('should initially be off', function(){
+      expect(animal.awake).toEqual(false)
     });
   });
 
    describe('#wakeUp', function(){
-    xit('should change state to awake', function(){
-
+    it('should change state to awake', function(){
+      expect(animal.awake).toEqual(true)
     });
   });
 

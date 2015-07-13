@@ -2,7 +2,7 @@ function Animal(name, age, kind, awake){
   this.name = name;
   this.age = age;
   this.kind = kind; // horse, lions , giraffes
-  this.awake= awake; // default to false
+  this.awake= false;  // default to false
 }
 
 Animal.prototype.oink = function(){
@@ -14,14 +14,19 @@ Animal.prototype.oink = function(){
 };
 
 Animal.prototype.growUp = function(){
-  //a method that increases the age of the animal by one
-}
+  this.age += 1;
+};
 
 Animal.prototype.feed = function(){
-  //if the animal is awake, return `"NOM NOM NOM"`
+  if(this.awake === true){
+    return('NOM NOM NOM')
+  }else{
+    return('false')
+  }
 }
 
 Animal.prototype.wakeUp = function() {
+  this.awake = false;
   //a method that changes the awake property to true
 }
 
