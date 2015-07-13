@@ -21,17 +21,16 @@ Animal.prototype.feed = function(){
   if(this.awake === true){
     return('NOM NOM NOM')
   }else{
-    return('false')
+    return('Must be fed later')
   }
 }
 
 Animal.prototype.wakeUp = function() {
-  this.awake = false;
-  //a method that changes the awake property to true
+  this.awake= true;
 }
 
 Animal.prototype.sleep = function () {
-  //a method that changes the awake property to false
+  this.awake= false;
 }
 
 //Constructor function
