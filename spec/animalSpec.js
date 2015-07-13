@@ -16,8 +16,8 @@ describe('Animal', function(){
     it('should oink if it is a pig', function(){
       expect(animal1.oink()).toEqual('oink!')
     });
-    xit('should not oink if it is not pig', function(){
-
+    it('should not oink if it is not pig', function(){
+      expect(animal2.oink()).toEqual('This is not a pig')
     });
   });
 

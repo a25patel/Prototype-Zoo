@@ -6,7 +6,7 @@ function Animal(name, age, kind, awake){
 }
 
 Animal.prototype.oink = function(){
-  if(this.kind === 'Pig'){
+  if(this.kind.toUpperCase() === 'PIG'){
     return'oink!'
   }else{
     return'This is not a pig'
